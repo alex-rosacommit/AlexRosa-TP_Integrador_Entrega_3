@@ -1,0 +1,28 @@
+CREATE DATABASE tpintegrador;
+
+USE tpintegrador;
+
+CREATE TABLE personas(
+	persona_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombre varchar(25)
+);
+
+CREATE TABLE partidos(
+	partido_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    ronda int,
+    equipo1 varchar(50),
+    equipo2 varchar(50),
+    golesEquipo1 int,
+    golesEquipo2 int
+);
+
+CREATE TABLE pronosticos(
+	pronostico_id int NOT NULL AUTO_INCREMENT,
+    persona_id int NOT NULL,
+    partido_id int NOT NULL,
+    resultado_prono varchar(20),
+    equipo varchar(50),
+    PRIMARY KEY (pronostico_id),
+    FOREIGN KEY (persona_id) REFERENCES personas(persona_id),
+    FOREIGN KEY (partido_id) REFERENCES partidos(partido_id)
+);

@@ -1,0 +1,19 @@
+USE tpintegrador;
+
+INSERT INTO personas(nombre) VALUES ('Mariana');
+INSERT INTO personas(nombre) VALUES ('Pedro');
+
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (1, 'ganador', 'Argentina');
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (1, 'empate', null);
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (1, 'ganador', 'Argentina');
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (1, 'ganador', 'Polonia');
+
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (2,'ganador', 'Argentina');
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (2, 'ganador', 'Mexico');
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (2, 'ganador', 'Argentina');
+INSERT INTO pronosticos(persona_id, resultado_prono, equipo) VALUES (2, 'empate', null);
+
+INSERT INTO partidos(ronda, equipo1, equipo2, golesEquipo1, golesEquipo2) VALUES (1, 'Argentina', 'Arabia Saudita', 1, 2);
+INSERT INTO partidos(ronda, equipo1, equipo2, golesEquipo1, golesEquipo2) VALUES (1, 'Polonia', 'Mexico', 0, 0);
+INSERT INTO partidos(ronda, equipo1, equipo2, golesEquipo1, golesEquipo2) VALUES (1, 'Argentina', 'Mexico', 2, 0);
+INSERT INTO partidos(ronda, equipo1, equipo2, golesEquipo1, golesEquipo2) VALUES (1, 'Arabia Saudita', 'Polonia', 0, 2);
